@@ -7,14 +7,33 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
+    AudioSource myAudio;
+    public AudioClip[] clips;
+
     public int coinsNumber = 0;
     public int levelNumber = 1;
     public int life = 3;
 
-    [SerializeField] private Text coinsNumberLabel;
-    [SerializeField] private Text levelNumberLabel;
-    [SerializeField] private Text lifeNumberLabel;
+    // UI
+    public Text coinsNumberLabel;
+    public Text levelNumberLabel;
+    public Text lifeNumberLabel;
 
+    // initial object
+    public static GameController instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    private void Start()
+    {
+        myAudio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update () {
@@ -23,12 +42,21 @@ public class GameController : MonoBehaviour {
         lifeNumberLabel.text = lifeNumberLabel.ToString();
 	}
 
+
+    // button function
     public void gameStartBtnPressed(){
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Level1");
     }
 
     public void gameBackBtnPressed()
     {
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("GameStart");
+    }
+
+
+    public void playMusic(int sound)
+    {
+        myAudio.clip = clips[sound];
+        myAudio.Play();
     }
 }

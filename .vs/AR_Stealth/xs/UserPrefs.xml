@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{C26C0899-A67D-E5A5-32D8-F456C1630055}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyFov.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="16" Column="6" />
-      <File FileName="Assets/Scripts/CameraRotation.cs" Line="56" Column="9" />
-      <File FileName="Assets/Scripts/GameController.cs" Line="12" Column="25" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="44" Column="5" />
+      <File FileName="Assets/Scripts/Coin.cs" Line="15" Column="27" />
+      <File FileName="Assets/Scripts/CameraRotation.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/EnemyFov.cs" Line="49" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

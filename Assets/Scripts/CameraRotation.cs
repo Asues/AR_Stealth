@@ -8,20 +8,17 @@ public class CameraRotation : MonoBehaviour
     [SerializeField] [Range(-90f, 90f)] private float rotationAngle = 30f;
     [SerializeField] private float rotationTime = 3f;
     [SerializeField] private float waitTime = 5f;
-    [SerializeField] private GameObject player;
 
     private Timer waitTimer;
     private float angle1, angle2;
     private bool isWaiting = false;
     private float t;
 
-
 	private void Start()
 	{
 		waitTimer = new Timer(waitTime, () => isWaiting = false, null);
 	    angle1 = transform.rotation.eulerAngles.y;
 	    angle2 = angle1 + rotationAngle;
-
 	}
 	
 	private void Update()
@@ -50,10 +47,5 @@ public class CameraRotation : MonoBehaviour
 	        isWaiting = true;
             waitTimer.Restart();
 	    }
-
-
-        // check the camera postion and move the player
-
-
 	}
 }

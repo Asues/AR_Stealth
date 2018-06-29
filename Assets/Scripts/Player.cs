@@ -28,6 +28,11 @@ public class Player : MonoBehaviour
         Debug.DrawRay(transform.position, playerRigidbody.velocity.normalized * 5f, Color.red);
 	}
 
+    private void Update()
+    {
+        playerRigidbody.AddForce(0.1f, 0, 0);
+    }
+
 
 
 }

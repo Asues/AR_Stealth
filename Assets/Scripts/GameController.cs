@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour {
 
     public int coinsNumber = 0;
     public int levelNumber = 1;
-    public int life = 3;
+    public int lifeNumber = 3;
 
     // UI
     public Text coinsNumberLabel;
@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour {
     void Update () {
         coinsNumberLabel.text = coinsNumber.ToString();
         levelNumberLabel.text = levelNumber.ToString();
-        lifeNumberLabel.text = lifeNumberLabel.ToString();
+        lifeNumberLabel.text = lifeNumber.ToString();
 	}
 
 

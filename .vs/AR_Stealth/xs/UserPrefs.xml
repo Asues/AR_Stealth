@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{C26C0899-A67D-E5A5-32D8-F456C1630055}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyFov.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TEST.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameController.cs" Line="44" Column="5" />
-      <File FileName="Assets/Scripts/Coin.cs" Line="15" Column="27" />
-      <File FileName="Assets/Scripts/CameraRotation.cs" Line="11" Column="1" />
-      <File FileName="Assets/Scripts/EnemyFov.cs" Line="49" Column="10" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="12" Column="5" />
+      <File FileName="Assets/Scripts/Coin.cs" Line="19" Column="5" />
+      <File FileName="Assets/Scripts/CameraRotation.cs" Line="36" Column="69" />
+      <File FileName="Assets/Scripts/EnemyFov.cs" Line="83" Column="68" />
+      <File FileName="Assets/Scripts/Player.cs" Line="40" Column="25" />
+      <File FileName="Assets/Scripts/ARCamera.cs" Line="5" Column="22" />
+      <File FileName="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" Line="40" Column="5" />
+      <File FileName="Assets/Scripts/TEST.cs" Line="6" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

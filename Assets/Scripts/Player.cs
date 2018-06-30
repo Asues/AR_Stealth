@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     public static Transform PlayerTransform;
 
     private Rigidbody playerRigidbody;
+    private CapsuleCollider capsuleCollider;
 
 	private void Start()
 	{
 	    PlayerTransform = transform;
         playerRigidbody = GetComponent<Rigidbody>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
     }
 
 
@@ -30,7 +32,20 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        playerRigidbody.AddForce(0.1f, 0, 0);
+        if (capsuleCollider.enabled == false)
+            playerRigidbody.isKinematic = true;
+        else
+            playerRigidbody.isKinematic = false;
+        //playerRigidbody.AddForce(0.1f, 0, 0);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //GameObject go = other.gameObject;
+        //if (go != null){
+        //    Destroy(go);
+        //}
+
     }
 
 

@@ -44,6 +44,7 @@ public class GameController : MonoBehaviour {
     {
         myAudio = GetComponent<AudioSource>();
         curLifes = lifeNumber;
+        playMusic(0);
     }
 
     // Update is called once per frame

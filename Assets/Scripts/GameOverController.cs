@@ -16,6 +16,7 @@ public class GameOverController : MonoBehaviour
 
         // get the highest coin number
         recordNumberLabel.text = GameController.instance.coinsNumber.ToString();
+        GameController.instance.playMusic(3);
     }
 
     // button function

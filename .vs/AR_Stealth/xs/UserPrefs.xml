@@ -9,7 +9,7 @@
       <File FileName="Assets/Scripts/Player.cs" Line="38" Column="49" />
       <File FileName="Assets/Scripts/ARCamera.cs" Line="5" Column="22" />
       <File FileName="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" Line="40" Column="5" />
-      <File FileName="Assets/Scripts/TEST.cs" Line="7" Column="22" />
+      <File FileName="Assets/Scripts/TEST.cs" Line="14" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

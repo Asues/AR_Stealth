@@ -1,6 +1,6 @@
 ## Read Me First
 
-this is a AR Worshop from is programm by Nils Merten and Hong Ma in TU Ilmenau, it is still not finished, but the main function to rotate the AR Image is working.
+this is a AR Worshop and programmed by Nils Merten and Hong Ma in TU Ilmenau, it is still not finished, but the main function to rotate the AR Image is working.
 
 ## Introduction
 The gold this game is very easy, you must get the coin and avoid the enemy area. If you staty in the enemy area more than 2 seconds, you will lose one life, if you lose 3 life, the game will be over. If you die once, the player should be start this level again. There are totally 2 levels to play.

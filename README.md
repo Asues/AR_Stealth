@@ -9,7 +9,7 @@ The gold this game is very easy, you must get the coin and avoid the enemy area.
 1. Print or download the Image```Object.jpg``` first.
 2. Start the project with Unity, and build it for your Smartphone system.
 3. Run the game with your phone.
-4. To move the player, you need to move the image ```Object.jpg```` such as rotate.
+4. To move the player, you need to move the image ```Object.jpg```  such as rotate.
 
 ## Others
 if you has any questions, pleas mail to me or Nils.

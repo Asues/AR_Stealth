@@ -3,13 +3,13 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TEST.cs">
     <Files>
       <File FileName="Assets/Scripts/GameController.cs" Line="12" Column="5" />
-      <File FileName="Assets/Scripts/Coin.cs" Line="19" Column="5" />
+      <File FileName="Assets/Scripts/Coin.cs" Line="26" Column="23" />
       <File FileName="Assets/Scripts/CameraRotation.cs" Line="36" Column="69" />
       <File FileName="Assets/Scripts/EnemyFov.cs" Line="83" Column="68" />
-      <File FileName="Assets/Scripts/Player.cs" Line="40" Column="25" />
+      <File FileName="Assets/Scripts/Player.cs" Line="38" Column="49" />
       <File FileName="Assets/Scripts/ARCamera.cs" Line="5" Column="22" />
       <File FileName="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" Line="40" Column="5" />
-      <File FileName="Assets/Scripts/TEST.cs" Line="6" Column="15" />
+      <File FileName="Assets/Scripts/TEST.cs" Line="7" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

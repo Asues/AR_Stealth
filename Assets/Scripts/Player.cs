@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Transform PlayerTransform;
+    public Transform SpawnPoint;
 
     private Rigidbody playerRigidbody;
     private CapsuleCollider capsuleCollider;
@@ -15,8 +16,15 @@ public class Player : MonoBehaviour
 	    PlayerTransform = transform;
         playerRigidbody = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
+
+        if (!GameController.instance.Entities.Contains(gameObject))
+            GameController.instance.Entities.Add(gameObject);
     }
 
+    private void OnEnable()
+    {
+        transform.position = SpawnPoint.position;
+    }
 
     private void FixedUpdate()
 	{

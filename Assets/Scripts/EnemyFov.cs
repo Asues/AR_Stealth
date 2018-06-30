@@ -18,6 +18,7 @@ public class EnemyFov : MonoBehaviour
     private MeshRenderer meshRenderer;
     private Mesh mesh;
     private int[] tris;
+    private Timer detectTimer;
 
 	private void Start ()
 	{
@@ -28,8 +29,14 @@ public class EnemyFov : MonoBehaviour
 	    meshFilter.mesh = mesh;
 	    CreateTris();
 	}
-	
-	private void LateUpdate ()
+
+    private void Update()
+    {
+        if (detectTimer != null)
+            detectTimer.Tick(Time.deltaTime);
+    }
+
+    private void LateUpdate ()
 	{
 	    CheckPlayerVisibility();
         UpdateMesh();
@@ -48,6 +55,7 @@ public class EnemyFov : MonoBehaviour
         if (dist > range || unsignedAngle > fovAngle / 2f)
         {
             IsSpotted = false;
+            ResetDetection();
             return;
         }
         else
@@ -58,10 +66,39 @@ public class EnemyFov : MonoBehaviour
             // spotted only with clear line of sight
             Physics.Raycast(ray, out hit, range);
             if (hit.collider != null && hit.collider.tag == "Player")
+            {
                 IsSpotted = true;
+                DetectedPlayer();
+            }
             else
+            {
                 IsSpotted = false;
+                ResetDetection();
+            }
         }
+    }
+
+    private void ResetDetection() 
+    {
+        if (detectTimer != null)
+        {
+            detectTimer.Restart();
+            detectTimer.Cancel();
+        }
+    }
+
+    private void DetectedPlayer()
+    {
+        if (detectTimer == null)
+            detectTimer = new Timer(GameController.instance.DetectionTime, DetectedPlayerFinal, null);
+        detectTimer.Start();
+    }
+
+    private void DetectedPlayerFinal()
+    {
+        detectTimer.Restart();
+        detectTimer.Cancel();
+        GameController.instance.GameOver();
     }
 
     public void UpdateMesh()

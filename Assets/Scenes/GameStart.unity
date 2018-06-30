@@ -1410,6 +1410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: debcb6c3c7fd3ce408e0dc15ae917f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnPoint: {fileID: 799222057}
 --- !u!1 &860314142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,9 +2692,11 @@ MonoBehaviour:
   coinsNumber: 0
   levelNumber: 1
   lifeNumber: 3
+  DetectionTime: 2
   coinsNumberLabel: {fileID: 0}
   levelNumberLabel: {fileID: 0}
   lifeNumberLabel: {fileID: 0}
+  Entities: []
 --- !u!4 &1396669099
 Transform:
   m_ObjectHideFlags: 0

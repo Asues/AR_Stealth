@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.5481933, g: 0.67049366, b: 0.9150943, a: 1}
+  m_AmbientEquatorColor: {r: 0.09732112, g: 0.49741897, b: 0.764151, a: 1}
+  m_AmbientGroundColor: {r: 0.2735849, g: 0.2404622, b: 0.1742168, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -452,6 +452,16 @@ Prefab:
     - target: {fileID: 54556485687113100, guid: 59839e50d74494623b04e7612b78ab4d,
         type: 2}
       propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114815776969967126, guid: 59839e50d74494623b04e7612b78ab4d,
+        type: 2}
+      propertyPath: SpawnPoint
+      value: 
+      objectReference: {fileID: 490099800}
+    - target: {fileID: 54556485687113100, guid: 59839e50d74494623b04e7612b78ab4d,
+        type: 2}
+      propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1030,6 +1040,34 @@ Transform:
   m_PrefabParentObject: {fileID: 4759384359733904, guid: 573ad9f11a57d4d3e8797d2bd19dcf27,
     type: 2}
   m_PrefabInternal: {fileID: 467469733}
+--- !u!1 &490099799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 490099800}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &490099800
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 490099799}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1736086373}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &502328816 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4326437571387848, guid: a1f5724b45927c5428e62a9f21e66e2d,
@@ -3581,7 +3619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -369.4, y: 173}
+  m_AnchoredPosition: {x: -369.4, y: 193}
   m_SizeDelta: {x: 32.19, y: 26.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1559283666
@@ -3623,7 +3661,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1819958554}
         m_MethodName: gameBackBtnPressed
         m_Mode: 1
         m_Arguments:
@@ -4029,6 +4067,7 @@ Transform:
   - {fileID: 864313870}
   - {fileID: 1442891110}
   - {fileID: 360258587}
+  - {fileID: 490099800}
   m_Father: {fileID: 1368993913}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4276,10 +4315,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 12879355ccb9d4f15b69fbc752a8ea88, type: 3}
   coinsNumber: 0
   levelNumber: 1
-  lifeNumber: 3
+  DetectionTime: 2
+  LevelList:
+  - Level1
+  - Level2
   coinsNumberLabel: {fileID: 849211284}
   levelNumberLabel: {fileID: 1219565626}
   lifeNumberLabel: {fileID: 1044206981}
+  Entities: []
 --- !u!1 &1914510861
 GameObject:
   m_ObjectHideFlags: 0

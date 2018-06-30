@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour {
 
-
     // rotation
     private void Update()
     {
-        transform.Rotate(Vector3.up, 45 * Time.deltaTime, Space.World);
+        transform.Rotate(transform.forward, 45 * Time.deltaTime, Space.World);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        getCoin();
+        if(other.tag == "Player")
+            getCoin();
     }
 
 
@@ -27,7 +27,11 @@ public class Coin : MonoBehaviour {
         GameController.instance.playMusic(1);
 
         // change the coin label
-        GameController.instance.coinsNumberLabel.text = GameController.instance.coinsNumber.ToString();
+        //sGameController.instance.coinsNumberLabel.text = GameController.instance.coinsNumber.ToString();
+
+        if (!GameController.instance.Entities.Contains(gameObject))
+            GameController.instance.Entities.Add(gameObject);
+        gameObject.SetActive(false);
     }
 
 

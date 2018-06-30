@@ -1,17 +1,11 @@
 ﻿<Properties StartupConfiguration="{C26C0899-A67D-E5A5-32D8-F456C1630055}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameOverController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameController.cs" Line="47" Column="22" />
       <File FileName="Assets/Scripts/Coin.cs" Line="30" Column="12" />
-      <File FileName="Assets/Scripts/CameraRotation.cs" Line="36" Column="69" />
-      <File FileName="Assets/Scripts/EnemyFov.cs" Line="57" Column="31" />
-      <File FileName="Assets/Scripts/Player.cs" Line="38" Column="49" />
-      <File FileName="Assets/Scripts/ARCamera.cs" Line="5" Column="22" />
-      <File FileName="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" Line="40" Column="5" />
-      <File FileName="Assets/Scripts/TEST.cs" Line="14" Column="18" />
-      <File FileName="Assets/Scripts/StartButton.cs" Line="8" Column="55" />
-      <File FileName="Assets/Scripts/GameOverController.cs" Line="19" Column="14" />
+      <File FileName="Assets/Scripts/GameOverController.cs" Line="17" Column="6" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="109" Column="9" />
+      <File FileName="Assets/Scripts/Player.cs" Line="24" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

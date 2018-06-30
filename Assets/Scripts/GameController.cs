@@ -44,7 +44,10 @@ public class GameController : MonoBehaviour {
     {
         myAudio = GetComponent<AudioSource>();
         curLifes = lifeNumber;
-        playMusic(0);
+
+
+        myAudio.PlayOneShot(clips[0]);
+
     }
 
     // Update is called once per frame
@@ -91,6 +94,7 @@ public class GameController : MonoBehaviour {
 
     private void ResetLevel()
     {
+        coinsNumber = 0;
         foreach (var go in Entities)
         {
             go.SetActive(false);

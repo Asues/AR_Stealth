@@ -10,13 +10,14 @@ public class GameOverController : MonoBehaviour
     
 
     [SerializeField] private Text recordNumberLabel;
+    AudioSource myAudio;
+    public AudioClip[] clips;
 
     private void Start()
-    {
-
-        // get the highest coin number
-        recordNumberLabel.text = GameController.instance.coinsNumber.ToString();
-        GameController.instance.playMusic(3);
+    {  
+        myAudio = GetComponent<AudioSource>();
+        myAudio.clip = clips[0];
+        myAudio.Play();
     }
 
     // button function
